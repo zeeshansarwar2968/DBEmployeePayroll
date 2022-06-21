@@ -53,3 +53,15 @@ Update employee_payroll set EmployeePhoneNumber='00032143567',EmployeeDepartment
 Update employee_payroll set EmployeePhoneNumber='7453457321',EmployeeDepartment='HR',Address='Chennai,TN' where name ='John';
 
 Update employee_payroll set EmployeePhoneNumber='8453417321',EmployeeDepartment='Marketing',Address='Bareilly,UP' where name ='Sarwar';
+
+------- UC 9: Rename Salary to Basic Pay and Add Deduction,Taxable pay, Income Pay , Netpay -------
+select * from employee_payroll;
+
+EXEC sp_RENAME 'employee_payroll.salary' , 'BasicPay'
+Alter table employee_payroll add Deduction float,TaxablePay float, IncomeTax float,NetPay float;
+
+Update employee_payroll set Deduction=1000 where Gender='F';
+Update employee_payroll set Deduction=2000 where Gender='M';
+Update employee_payroll set NetPay=(BasicPay - Deduction);
+Update employee_payroll set TaxablePay=0,IncomeTax=0;
+select * from employee_payroll;

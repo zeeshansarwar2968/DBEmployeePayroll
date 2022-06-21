@@ -11,3 +11,11 @@ name varchar(200) not null,
 salary float,
 startDate date
 )
+
+--UC-3 Insert values in Table
+Insert into employee_payroll(name,salary,startDate) values
+('Zeeshan',20000,'2022-03-12'),
+('Sarwar',25000,'2022-04-18'),
+('John',10000,'2022-05-13'),
+('Amelia',30000,'2022-06-09');
+select * from employee_payroll;

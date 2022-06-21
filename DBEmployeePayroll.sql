@@ -23,3 +23,7 @@ select * from employee_payroll;
 
 --UC-4 Retrieve All data--
 select * from employee_payroll;
+
+------- UC 5: Select Query using Cast() an GetDate() -------
+select salary from employee_payroll where name='John';
+select salary from employee_payroll where startDate BETWEEN Cast('2022-05-13' as Date) and GetDate();

@@ -19,3 +19,7 @@ Insert into employee_payroll(name,salary,startDate) values
 ('John',10000,'2022-05-13'),
 ('Amelia',30000,'2022-06-09');
 select * from employee_payroll;
+
+
+--UC-4 Retrieve All data--
+select * from employee_payroll;

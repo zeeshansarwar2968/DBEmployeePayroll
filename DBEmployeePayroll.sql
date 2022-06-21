@@ -65,3 +65,8 @@ Update employee_payroll set Deduction=2000 where Gender='M';
 Update employee_payroll set NetPay=(BasicPay - Deduction);
 Update employee_payroll set TaxablePay=0,IncomeTax=0;
 select * from employee_payroll;
+
+------- UC 10: Adding another Value for Rujula in Editing Department -------
+
+Insert into employee_payroll(name,BasicPay,StartDate,Address,EmployeePhoneNumber,EmployeeDepartment) values ('Amelia',32000,'2022-06-09','Bangalore,Karnataka','7456187321','Marketing');
+select * from employee_payroll;
